@@ -1,4 +1,4 @@
-# Proyecto Alke Wallet - Automatización de Evaluación Crediticia
+# Proyecto Alke Wallet - Machine Learning de Evaluación Crediticia Predictiva
 ## Descripción
 Sistema de machine learning para predecir la aprobación crediticia de usuarios utilizando datos históricos. Este proyecto fue desarrollado como parte del módulo de Machine Learning para Ingenieros de Datos.
 ## Estructura del Proyecto
