@@ -1,0 +1,98 @@
+@host = http://127.0.0.1:5000
+# Si pruebas desde otra máquina en tu red:
+# @host = http://192.168.1.22:5000
+
+### Health check
+GET {{host}}/health
+
+### Predicción (LogReg)
+POST {{host}}/predict_credit
+Content-Type: application/json
+
+{
+  "features": {
+    "A1": "b",
+    "A2": 30.83,
+    "A4": "u",
+    "A5": "g",
+    "A6": "w",
+    "A7": "v",
+    "A8": 1.25,
+    "A9": "t",
+    "A10": "t",
+    "A11": 1,
+    "A12": "f",
+    "A13": "g",
+    "A14": 202.0,
+    "A15": 0
+  }
+}
+
+### Predicción (KNN)
+POST {{host}}/predict_credit_knn
+Content-Type: application/json
+
+{
+  "features": {
+    "A1": "a",
+    "A2": 28.5,
+    "A4": "y",
+    "A5": "p",
+    "A6": "q",
+    "A7": "h",
+    "A8": 2.0,
+    "A9": "f",
+    "A10": "t",
+    "A11": 4,
+    "A12": "t",
+    "A13": "p",
+    "A14": 120.0,
+    "A15": 1
+  }
+}
+
+### Predicción de ingreso (Regresión A3)
+POST {{host}}/predict_income
+Content-Type: application/json
+
+{
+  "features": {
+    "A1": "a",
+    "A2": 28.5,
+    "A4": "y",
+    "A5": "p",
+    "A6": "q",
+    "A7": "h",
+    "A8": 2.0,
+    "A9": "f",
+    "A10": "t",
+    "A11": 4,
+    "A12": "t",
+    "A13": "p",
+    "A14": 120.0,
+    "A15": 1
+  }
+}
+
+### (Negativo) Falta una columna -> 400
+POST {{host}}/predict_credit
+Content-Type: application/json
+
+{
+  "features": {
+    "A1": "b",
+    "A2": 30.83,
+    "A4": "u",
+    "A5": "g",
+    "A6": "w",
+    "A7": "v",
+    "A8": 1.25,
+    "A9": "t",
+    "A10": "t",
+    "A11": 1,
+    "A12": "f",
+    "A13": "g",
+    "A14": 202.0
+  }
+}
+

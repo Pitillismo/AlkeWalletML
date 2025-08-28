@@ -1,0 +1,24 @@
+# Entorno virtual
+.venv/
+venv/
+
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de entorno
+.env
+.env.local
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# IDE (opcional, si usas PyCharm)
+.idea/
+.vscode/
